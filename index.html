@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartCode</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet" />
+    <!-- React -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+      function App() {
+
+        const [lang, setLang] = React.useState('arabic')
+
+        function ToggleLang() {
+          setLang(prev => prev === 'arabic' ? 'english' : 'arabic')
+        }
+        
+        return (
+        <div>
+          <div className="header" id="header" style={lang === 'arabic' ? {direction: 'ltr'} : {direction: 'rtl'}}>
+            <div className="container">
+              <a href="#" className="logo"><img src='./imgs/SmartCode-removebg-preview.png' /></a>
+              <ul className="main-nav">
+                <li className='lang' onClick={ToggleLang}>{lang === 'arabic' ? 'English' : 'العربية'}</li>
+                <li><a href="#footer">{lang === 'arabic' ? 'أتصل بنا' : 'Contact Us'}</a></li>
+                <li><a href="#services">{lang === 'arabic' ? 'خدماتنا' : 'Services'}</a></li>
+                <li><a href="#projects">{lang === 'arabic' ? 'أعمالنا' : 'Projects'}</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="landing" style={lang === 'arabic' ? {direction: 'rtl'} : {direction: 'ltr'}}>
+            <div className="container">
+              <div className="text">
+                <p>{lang === 'arabic' ? 'الخدمات الإلكترونية الحديثة وأعمال التصميم والبرمجيات التي تساعد نشاطك التجاري على النمو' : 'The Best Software Services, Design That Will Help Your Business To Grow'}</p>
+              </div>
+              <div className="image">
+                <img src="imgs/gallery-01-removebg-preview.png" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div className="projects" id="projects">
+            <h2 className="main-title">{lang === 'arabic' ? 'أعمالنا' : 'Projects'}</h2>
+            <div className="container">
+              <div className="box">
+                <div className="image">
+                  <a href='https://closets-palace.netlify.app/'><img src="imgs/Capture.png" alt="" /></a>
+                </div>
+              </div>
+              <div className="box">
+                <div className="image">
+                  <img src="imgs/gallery-03.png" alt="" />
+                </div>
+              </div>
+              <div className="box">
+                <div className="image">
+                  <img src="imgs/gallery-03.jpg" alt="" />
+                </div>
+              </div>
+              <div className="box">
+                <div className="image">
+                  <img src="imgs/gallery-03.png" alt="" />
+                </div>
+              </div>
+              <div className="box">
+                <div className="image">
+                  <img src="imgs/gallery-03.jpg" alt="" />
+                </div>
+              </div>
+              <div className="box">
+                <div className="image">
+                  <img src="imgs/gallery-02.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="services" id="services" style={lang === 'arabic' ? {direction: 'rtl'} : {direction: 'ltr'}}>
+            <h2 className="main-title">{lang === 'arabic' ? 'خدماتنا' : 'Services'}</h2>
+            <div className="container">
+              <div className="box">
+                <i className="fas fa-laptop-code fa-4x"></i>
+                <h3>{lang === 'arabic' ? 'تصميم المواقع الإلكترونية' : 'Websites Design'}</h3>
+              </div>
+              <div className="box">
+                <i className="fas fa-mobile-alt fa-4x"></i>
+                <h3>{lang === 'arabic' ? 'تصميم تطبيقات الجوال' : 'Mobile Applications'}</h3>
+              </div>
+              <div className="box">
+                <i className="fas fa-shopping-bag fa-4x"></i>
+                <h3>{lang === 'arabic' ? 'تصميم المتاجر الإلكترونية' : 'Ecommerce Store'}</h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="team" id="team" style={lang === 'arabic' ? {direction: 'rtl'} : {direction: 'ltr'}}>
+            <h2 className="main-title">{lang === 'arabic' ? 'فريقنا': 'Our Teams'}</h2>
+            <div className="container">
+              <div className="box">
+                <img src="imgs/" alt="g" />
+                <h3>{lang === 'arabic' ? 'غسان': 'Ghasan'}</h3>
+                <span className="title">Full Stack Developer</span>
+                <p>
+                  
+                </p>
+              </div>
+              <div className="box">
+                <img src="imgs/" alt="A" />
+                <h3>{lang === 'arabic' ? 'أشواق': 'Ashwaq'}</h3>
+                <span className="title">Full Stack Developer</span>
+                <p>
+                </p>
+              </div>
+              <div className="box">
+                <img src="imgs/" alt="M" />
+                <h3>{lang === 'arabic' ? 'مصطفى': 'Mostafa'}</h3>
+                <span className="title">Full Stack Developer</span>
+                <p>
+                </p>
+              </div>
+              <div className="box">
+                <img src="imgs/" alt="M" />
+                <h3>{lang === 'arabic' ? 'محمد': 'Mohammed'}</h3>
+                <span className="title">Full Stack Developer</span>
+                <p>
+                </p>
+              </div>
+              <div className="box">
+                <img src="imgs/" alt="F" />
+                <h3>{lang === 'arabic' ? 'فاطمة': 'Fatima'}</h3>
+                <span className="title">Full Stack Developer</span>
+                <p>
+                </p>
+              </div>
+              <div className="box">
+                <img src="imgs/" alt="A" />
+                <h3>{lang === 'arabic' ? 'عبدالكريم': 'Abdulkareem'}</h3>
+                <span className="title">Full Stack Developer</span>
+                <p>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="footer" id="footer" style={lang === 'arabic' ? {direction: 'rtl'} : {direction: 'ltr'}}>
+            <div className="container">
+              <div className="box">
+                <h3>&#123; SmartCode &#125;</h3>
+                <ul className="social">
+                  <li>
+                    <a href="#" className="whatsapp">
+                      <i className="fab fa-whatsapp"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="twitter">
+                      <i className="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="youtube">
+                      <i className="fab fa-youtube"></i>
+                    </a>
+                  </li>
+                </ul>
+                <p className="text">
+                  {lang === 'arabic' ? 'نحرص دائما على تقديم افضل الحلول وبأفضل المعايير المعتمدة في تصميم وتطوير المواقع والبوابات الإلكترونية والتطبيقات' : 'We provide the best solutions and high standards in the design and development of websites, E-store and mobile applications'}
+                </p>
+              </div>
+              <div className="box">
+                <div className="line">
+                  <i className="fas fa-map-marker-alt fa-fw"></i>
+                  <div className="info">{lang === 'arabic' ? 'المملكة العربية السعودية' : 'Saudi Arabia'}</div>
+                </div>
+                <div className="line">
+                  <i className="far fa-clock fa-fw"></i>
+                  <div className="info">{lang === 'arabic' ? 'نعمل على مدار الساعة طوال أيام الاسبوع' : '24/7'}</div>
+                </div>
+                <div className="line">
+                  <i className="fas fa-phone-volume fa-fw"></i>
+                  <div className="info">
+                    <span>+966500109632</span>
+                    <span>+966500109632</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p className="copyright">2023 Copyright<span>&#169;</span> </p>
+          </div>
+        </div>
+      )} 
+
+      ReactDOM.render(<App/>, document.getElementById('root'))
+
+    </script>
+    
+
+
+  </body>
+</html>
